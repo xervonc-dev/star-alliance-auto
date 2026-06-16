@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Star Alliance Auto</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.15);
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+button{
+    background:#0066cc;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    font-size:18px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#004c99;
+}
+
+#message{
+    margin-top:20px;
+    font-size:24px;
+    color:green;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Star Alliance Auto</h1>
+
+    <p>Upload your logo as <b>logo.jpeg</b> to this repository.</p>
+
+    <img src="logo.jpeg" alt="Star Alliance Auto Logo">
+
+    <br><br>
+
+    <button onclick="payBill()">Pay Bill</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+function payBill() {
+    document.getElementById("message").innerHTML = "Bill paid.";
+}
+</script>
+
+</body>
+</html>
