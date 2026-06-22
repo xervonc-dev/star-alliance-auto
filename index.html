@@ -3,74 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Star Alliance Auto</title>
+<title>RUN</title>
 
 <style>
-body{
+body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background:#f4f4f4;
-    text-align:center;
-    padding:40px;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        #ff8c42 0%,
+        #ffb347 30%,
+        #3a6ea5 60%,
+        #0f3057 100%
+    );
 }
 
-.container{
-    max-width:700px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 0 15px rgba(0,0,0,0.15);
+.ocean {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: #1b4f72;
 }
 
-img{
-    max-width:100%;
-    height:auto;
+.sun {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: orange;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-button{
-    background:#0066cc;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    font-size:18px;
-    border-radius:8px;
-    cursor:pointer;
+.shadow {
+    position: absolute;
+    bottom: 35%;
+    left: 75%;
+    width: 30px;
+    height: 80px;
+    background: black;
 }
 
-button:hover{
-    background:#004c99;
+.mug {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    background: white;
+    left: -10px;
+    top: 20px;
 }
 
-#message{
-    margin-top:20px;
-    font-size:24px;
-    color:green;
-    font-weight:bold;
+.title {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+}
+
+.menu {
+    position: absolute;
+    top: 250px;
+    left: 50px;
+}
+
+button {
+    display: block;
+    margin: 10px;
+    padding: 15px 40px;
+    font-size: 24px;
+    cursor: pointer;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Star Alliance Auto</h1>
+<div class="sun"></div>
+<div class="ocean"></div>
 
-    <p>Upload your logo as <b>logo.jpeg</b> to this repository.</p>
-
-    <img src="logo.jpeg" alt="Star Alliance Auto Logo">
-
-    <br><br>
-
-    <button onclick="payBill()">Pay Bill</button>
-
-    <div id="message"></div>
+<div class="shadow">
+    <div class="mug"></div>
 </div>
 
-<script>
-function payBill() {
-    document.getElementById("message").innerHTML = "Bill paid.";
-}
-</script>
+<div class="title">RUN</div>
+
+<div class="menu">
+    <button onclick="alert('Game Coming Soon')">Play</button>
+    <button onclick="alert('Settings Coming Soon')">Settings</button>
+</div>
 
 </body>
 </html>
